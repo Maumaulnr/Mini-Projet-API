@@ -1,0 +1,70 @@
+/* Style des carrés de Pokémon */
+.pokemon-item {
+    display: inline-block;
+    width: 112px; /* Largeur du conteneur */
+    height: 112px; 
+    padding: 10px;
+    margin: 3px;
+    text-align: center;
+    border-radius: 9px;
+    box-shadow: 0px 8px 18px 0px rgba(0, 0, 0, 0.3); /* Ajoute une ombre légère */
+    transition: transform 0.2s, box-shadow 0.2s; /* Ajoute une transition pour l'animation */
+    position: relative; /* Pour positionner l'ombre absolument */
+}
+
+/* Styles pour l'ombre sous les conteneurs */
+.pokemon-container::before {
+    content: "";
+    position: absolute;
+    bottom: -5px; /* Ajustez la distance de l'ombre par rapport au conteneur */
+    left: 50%; /* Pour centrer l'ombre horizontalement */
+    transform: translateX(-50%);
+    width: 30px; /* Ajustez la largeur de l'ombre */
+    height: 30px; /* Ajustez la hauteur de l'ombre */
+    background: rgba(0, 0, 0, 0.3); /* Couleur de l'ombre */
+    border-radius: 50%; /* Forme de l'ombre en cercle */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Ombre légère */
+}
+
+/* Styles pour le survol des conteneurs */
+.pokemon-item:hover {
+    transform: translateY(-5px); /* Déplace vers le haut de 5 pixels lors du survol */
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5); /* Renforce l'ombre pendant le survol */
+}
+
+/* Style pour le nom en gras */
+.pokemon-name {
+    font-weight: bold;
+}
+
+.pokemon-item p {
+    margin: 0; /* Enlève la marge */
+}
+
+/* Style des images de Pokémon */
+.pokemon-image {
+    width: 60px; /* Largeur de l'image */
+    height: 60px; /* Hauteur de l'image */
+}
+
+/* Styles pour le type "eau", etc */
+.pokemon-bug {
+    background-color: rgb(242 246 209);
+}
+
+.pokemon-grass {
+    background-color: rgb(225 251 224);
+}
+
+.pokemon-fire {
+    background-color: rgb(251 222 224);
+}
+
+.pokemon-normal {
+    background-color: rgb(207 207 207);
+}
+
+.pokemon-water {
+    background-color: rgb(225 242 252);
+}
+
